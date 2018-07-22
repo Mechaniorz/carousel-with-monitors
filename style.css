@@ -1,0 +1,109 @@
+@keyframes slidy1 {
+0% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+14% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+18% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+48% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+52% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+81% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+85% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+100% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+}
+@keyframes slidy2 {
+0% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+14% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+18% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+48% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+52% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+81% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+85% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+100% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+}
+@keyframes slidy3 {
+0% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+14% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+18% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+48% { transform: translateX(0px) translateZ(0px) rotateY(0deg); }
+52% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+81% { transform: translateX(-350px) translateZ(-200px) rotateY(45deg); }
+85% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+100% { transform: translateX(350px) translateZ(-200px) rotateY(-45deg); }
+}
+@keyframes slidy4 {
+	0% { transform: translateY(0); }
+	40% { transform: translateY(-79%); }
+	60% { transform: translateY(-79%); }
+	100% { transform: translateY(0); }
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+.dg-container{
+	width: 100%;
+    height: 437px;
+    position: relative;
+}
+.monitor-carousel{
+    width: 726px;
+    height: 437px;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+}
+.monitor-carousel__preview {
+	display: block;
+    margin: 24px 0 0 87px;
+    width: 553px;
+	height: 344.88px;
+	overflow: hidden;
+	position: relative;
+}
+.monitor-carousel__preview img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform-origin: bottom center;
+	transform: translateY(0px);
+	animation: 50s slidy4 infinite;
+}
+.monitor-carousel__image{
+	position: absolute;
+	width: 726px;
+    height: 437px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent url(images/macbook.png) no-repeat top left;
+}
+.carousel__image-first{
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transform: translateX(-350px) translateZ(-200px) rotateY(45deg);
+	animation: 10s slidy1 infinite;
+}
+.carousel__image-second{
+	top: 0;
+	left: 0;
+	z-index: 2;
+	transform: translateX(0px) translateZ(0px) rotateY(0deg);
+	animation: 10s slidy2 infinite;
+}
+.carousel__image-third{
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transform: translateX(350px) translateZ(-200px) rotateY(-45deg);
+	animation: 10s slidy3 infinite;
+}
